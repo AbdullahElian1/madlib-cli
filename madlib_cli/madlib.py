@@ -20,5 +20,19 @@ def merge(string_text:str,word_to_add:tuple):
     return final_text
 
 
+answer=[]
 
+print("wlcome to midlib game")
+
+
+def start_game():
+    read=read_template("assets/text.txt")
+    text,value=parse_template(read)
+    for item in value:
+        input_user=input(f"enter {item}")
+        answer.append(input_user)
+    return merge(text,answer)
+
+if __name__== "__main__":
+ start_game()
 
