@@ -10,7 +10,7 @@ def read_template(file_path:str)->str:
 
 def parse_template(word:str)->str:
  actual_part=tuple(re.findall(r'{(.*?)}',word))
- actual_stripped=re.sub('{.*?}','{}',word)
+ actual_stripped=re.sub('{.*/k?}','{}',word)
  return actual_stripped,actual_part
 #teeeest
 def merge(string_text:str,word_to_add:tuple):
